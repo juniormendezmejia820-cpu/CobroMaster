@@ -1,35 +1,35 @@
 :root {
     --primary: #00ff88;
     --danger: #ff4d4d;
-    --dark: #0a0a0a;
-    --card: #161616;
+    --dark: #0d0d0d;
+    --card: #1a1a1a;
 }
 
-body { font-family: sans-serif; background: var(--dark); color: white; margin: 0; padding: 15px; }
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: var(--dark); color: white; margin: 0; padding: 15px; }
 .container { max-width: 100%; }
-h1 { font-size: 1.5rem; text-align: center; color: var(--primary); }
+h1 { text-align: center; color: var(--primary); font-size: 1.8rem; margin-bottom: 5px; }
 
-.card { background: var(--card); padding: 15px; border-radius: 12px; margin-bottom: 15px; }
-summary { font-weight: bold; padding: 10px; cursor: pointer; color: var(--primary); }
+.resumen { background: var(--primary); color: black; padding: 12px; border-radius: 10px; font-weight: bold; text-align: center; margin-bottom: 20px; font-size: 1.1rem; }
+
+.card { background: var(--card); padding: 15px; border-radius: 15px; margin-bottom: 15px; border: 1px solid #333; }
+summary { font-weight: bold; padding: 5px; color: var(--primary); cursor: pointer; }
 
 input, select { 
-    width: 100%; padding: 15px; margin: 8px 0; border-radius: 8px; 
-    border: 1px solid #333; background: #222; color: white; font-size: 16px; /* 16px evita zoom en iPhone */
+    width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; 
+    border: 1px solid #444; background: #222; color: white; font-size: 16px; box-sizing: border-box;
 }
 
-.btn-guardar { width: 100%; padding: 15px; background: var(--primary); border: none; border-radius: 8px; font-weight: bold; }
+.btn-guardar { width: 100%; padding: 18px; background: var(--primary); border: none; border-radius: 10px; font-weight: bold; font-size: 1rem; cursor: pointer; }
 
-.cliente-card { 
-    background: var(--card); padding: 15px; border-radius: 12px; 
-    margin-bottom: 12px; border-left: 5px solid #444;
-}
+.cliente-card { background: var(--card); padding: 15px; border-radius: 15px; margin-bottom: 12px; border-left: 8px solid #444; }
+.hoy { border-left-color: var(--danger); background: #2a1515; animation: blink 2s infinite; }
 
-.hoy { border-left-color: var(--danger); background: #221111; animation: pulso 2s infinite; }
+.alerta { color: var(--danger); font-weight: bold; text-decoration: underline; }
 
-.botones { display: flex; gap: 8px; margin-top: 12px; }
-.btn-cobrar { flex: 1; background: #25d366; color: white; padding: 15px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
-.btn-pago { flex: 1; background: #3498db; color: white; padding: 15px; border-radius: 8px; border: none; font-weight: bold; }
+@keyframes blink { 0% { opacity: 1; } 50% { opacity: 0.7; } 100% { opacity: 1; } }
 
-.resumen { background: var(--primary); color: black; padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; margin-bottom: 15px; }
+.botones { display: flex; gap: 10px; margin-top: 15px; }
+.btn-cobrar { flex: 1; background: #25d366; color: white; padding: 15px; border-radius: 10px; text-align: center; text-decoration: none; font-weight: bold; cursor: pointer; }
+.btn-pago { flex: 1; background: #007bff; color: white; border: none; padding: 15px; border-radius: 10px; font-weight: bold; cursor: pointer; }
 
-@keyframes pulso { 0% { box-shadow: 0 0 0 0px rgba(255, 77, 77, 0.4); } 100% { box-shadow: 0 0 0 10px rgba(255, 77, 77, 0); } }
+.buscador { margin-bottom: 20px; border-color: var(--primary); }
