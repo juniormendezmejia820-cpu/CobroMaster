@@ -1,0 +1,35 @@
+:root {
+    --primary: #00ff88;
+    --danger: #ff4d4d;
+    --dark: #0a0a0a;
+    --card: #161616;
+}
+
+body { font-family: sans-serif; background: var(--dark); color: white; margin: 0; padding: 15px; }
+.container { max-width: 100%; }
+h1 { font-size: 1.5rem; text-align: center; color: var(--primary); }
+
+.card { background: var(--card); padding: 15px; border-radius: 12px; margin-bottom: 15px; }
+summary { font-weight: bold; padding: 10px; cursor: pointer; color: var(--primary); }
+
+input, select { 
+    width: 100%; padding: 15px; margin: 8px 0; border-radius: 8px; 
+    border: 1px solid #333; background: #222; color: white; font-size: 16px; /* 16px evita zoom en iPhone */
+}
+
+.btn-guardar { width: 100%; padding: 15px; background: var(--primary); border: none; border-radius: 8px; font-weight: bold; }
+
+.cliente-card { 
+    background: var(--card); padding: 15px; border-radius: 12px; 
+    margin-bottom: 12px; border-left: 5px solid #444;
+}
+
+.hoy { border-left-color: var(--danger); background: #221111; animation: pulso 2s infinite; }
+
+.botones { display: flex; gap: 8px; margin-top: 12px; }
+.btn-cobrar { flex: 1; background: #25d366; color: white; padding: 15px; border-radius: 8px; text-align: center; text-decoration: none; font-weight: bold; font-size: 0.9rem; }
+.btn-pago { flex: 1; background: #3498db; color: white; padding: 15px; border-radius: 8px; border: none; font-weight: bold; }
+
+.resumen { background: var(--primary); color: black; padding: 10px; border-radius: 8px; font-weight: bold; text-align: center; margin-bottom: 15px; }
+
+@keyframes pulso { 0% { box-shadow: 0 0 0 0px rgba(255, 77, 77, 0.4); } 100% { box-shadow: 0 0 0 10px rgba(255, 77, 77, 0); } }

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>CobroMaster | Mi Caja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>CobroMaster 🚀</h1>
+            <div id="resumenCaja" class="resumen">Cargando...</div>
+        </header>
+
+        <section class="registro card">
+            <details>
+                <summary>➕ Nuevo Préstamo</summary>
+                <div class="form-group">
+                    <input type="text" id="nombre" placeholder="Nombre">
+                    <input type="text" id="telefono" placeholder="WhatsApp (Ej: 57300...)">
+                    <input type="number" id="monto" placeholder="Capital $">
+                    <select id="tasaInteres" class="input-select">
+                        <option value="20">Interés 20%</option>
+                        <option value="15">Interés 15%</option>
+                    </select>
+                    <input type="date" id="fechaPago">
+                    <button onclick="agregarCliente()" class="btn-guardar">GUARDAR</button>
+                </div>
+            </details>
+        </section>
+
+        <input type="text" id="buscador" class="buscador" placeholder="🔍 Buscar deudor..." onkeyup="actualizarTodo()">
+
+        <div id="listaClientes"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
