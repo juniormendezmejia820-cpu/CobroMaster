@@ -1,20 +1,20 @@
 :root { --primary: #00ff88; --danger: #ff4d4d; --dark: #0d0d0d; --card: #1a1a1a; }
-body { font-family: sans-serif; background: var(--dark); color: white; margin: 0; padding: 15px; }
-.container { max-width: 100%; }
+body { font-family: -apple-system, sans-serif; background: var(--dark); color: white; margin: 0; padding: 15px; }
+.container { max-width: 500px; margin: auto; }
 h1 { text-align: center; color: var(--primary); }
 .resumen { background: var(--primary); color: black; padding: 12px; border-radius: 10px; font-weight: bold; text-align: center; margin-bottom: 20px; }
 .card { background: var(--card); padding: 15px; border-radius: 15px; margin-bottom: 15px; border: 1px solid #333; }
 input, select { width: 100%; padding: 15px; margin: 10px 0; border-radius: 10px; border: 1px solid #444; background: #222; color: white; font-size: 16px; box-sizing: border-box; }
-.btn-guardar { width: 100%; padding: 18px; background: var(--primary); border: none; border-radius: 10px; font-weight: bold; }
-.cliente-card { background: var(--card); padding: 15px; border-radius: 15px; margin-bottom: 12px; border-left: 8px solid var(--primary); }
-.cliente-card h4 { margin: 0; cursor: pointer; text-decoration: underline; color: var(--primary); }
-.botones { display: flex; gap: 8px; margin-top: 15px; }
-.btn-cobrar { flex: 1; background: #25d366; color: white; padding: 12px; border-radius: 8px; border: none; font-weight: bold; }
-.btn-pago { flex: 1; background: #007bff; color: white; padding: 12px; border-radius: 8px; border: none; font-weight: bold; }
+.btn-guardar { width: 100%; padding: 15px; background: var(--primary); border: none; border-radius: 10px; font-weight: bold; font-size: 1rem; }
+.cliente-card { background: var(--card); padding: 15px; border-radius: 15px; margin-bottom: 12px; border-left: 6px solid var(--primary); }
+.cliente-card h4 { margin: 0 0 10px 0; color: var(--primary); text-decoration: underline; cursor: pointer; font-size: 1.2rem; }
+.hoy { border-left-color: var(--danger); background: #2a1515; }
+.botones { display: flex; gap: 8px; margin-top: 10px; }
+.btn-pago { flex: 2; background: #007bff; color: white; padding: 12px; border: none; border-radius: 8px; font-weight: bold; }
+.btn-borrar { background: var(--danger); color: white; border: none; border-radius: 8px; font-weight: bold; }
 
-/* Estilos del Historial */
-.modal { display: none; position: fixed; z-index: 10; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.9); }
-.modal-content { background: #222; margin: 15% auto; padding: 20px; border-radius: 15px; width: 85%; }
-.close { color: #aaa; float: right; font-size: 28px; font-weight: bold; }
-table { width: 100%; border-collapse: collapse; margin-top: 10px; }
-table th, table td { padding: 10px; border-bottom: 1px solid #444; text-align: left; }
+/* MODAL */
+.modal { display: none; position: fixed; z-index: 100; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.95); overflow-y: auto; }
+.modal-content { background: #161616; margin: 10% auto; padding: 25px; border-radius: 20px; width: 85%; border: 1px solid #333; position: relative; }
+.close { position: absolute; right: 20px; top: 10px; font-size: 35px; color: #fff; cursor: pointer; }
+th, td { padding: 12px; text-align: left; }
