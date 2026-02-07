@@ -3,34 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>CobroMaster | Mi Caja</title>
+    <title>CobroMaster | Mi Control</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
         <header>
             <h1>CobroMaster 🚀</h1>
-            <div id="resumenCaja" class="resumen">Cargando...</div>
+            <div id="resumenCaja" class="resumen">Calculando intereses...</div>
         </header>
 
         <section class="registro card">
-            <details>
-                <summary>➕ Nuevo Préstamo</summary>
+            <details open>
+                <summary>➕ Registrar Nuevo Préstamo</summary>
                 <div class="form-group">
-                    <input type="text" id="nombre" placeholder="Nombre">
+                    <input type="text" id="nombre" placeholder="Nombre del deudor">
                     <input type="text" id="telefono" placeholder="WhatsApp (Ej: 57300...)">
-                    <input type="number" id="monto" placeholder="Capital $">
+                    <input type="number" id="monto" placeholder="Capital Prestado $">
                     <select id="tasaInteres" class="input-select">
-                        <option value="20">Interés 20%</option>
-                        <option value="15">Interés 15%</option>
+                        <option value="20">Interés del 20%</option>
+                        <option value="15">Interés del 15%</option>
                     </select>
+                    <label>Fecha de Cobro Mensual:</label>
                     <input type="date" id="fechaPago">
-                    <button onclick="agregarCliente()" class="btn-guardar">GUARDAR</button>
+                    <button onclick="agregarCliente()" class="btn-guardar">GUARDAR EN MEMORIA</button>
                 </div>
             </details>
         </section>
 
-        <input type="text" id="buscador" class="buscador" placeholder="🔍 Buscar deudor..." onkeyup="actualizarTodo()">
+        <input type="text" id="buscador" class="buscador" placeholder="🔍 Buscar por nombre..." onkeyup="actualizarTodo()">
 
         <div id="listaClientes"></div>
     </div>
